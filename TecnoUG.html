@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de venta y mantenimiento de equipos de cómputo. Configura tu PC ideal con nuestros expertos y encuentra los mejores componentes. ¡Contáctanos!">
+    <title>TecnoUG - Venta y Mantenimiento de PCs Ecuador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="stylesheet" href="TecnoUG.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">TecnoUG</a>  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link minimalista" href="#quienes-somos">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link minimalista" href="#equipo">Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link minimalista" href="#contacto">Contáctenos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Pantalla Principal -->
+<div class="main-screen">
+    <h1>Bienvenido a TecnoUG</h1>
+    <p>Venta y Mantenimiento de PCs con calidad y confianza</p>
+    <div>
+        <a href="#ventas" class="btn btn-primary btn-main">Ventas</a>
+        <a href="#mantenimiento" class="btn btn-secondary btn-main">Mantenimiento</a>
+        <a href="#configuracion-pc" class="btn btn-tercero btn-main">Configura tu PC</a>
+    </div>
+</div>
+
+
+<!-- Quienes Somos -->
+<section id="quienes-somos" class="py-5 somos">
+    <div class="container info">
+        <h2 class="text-center mb-4">Quiénes Somos</h2>
+        <p class="text-center">En TecnoUG somos expertos en tecnología, dedicados a ofrecer los mejores productos y servicios de mantenimiento de computadoras. Nos enfocamos en calidad y satisfacción del cliente.</p>
+    </div>
+</section>
+
+<!-- Sección de Ventas -->
+<section id="ventas" class="py-5 ventas">
+    <div class="container">
+        <h2 class="text-center mb-4">Ventas</h2>
+        <p class="text-center">Aquí puedes ver los productos de nuestra tienda.</p>
+
+
+        <!-- Filtro por categoría con botón de búsqueda -->
+        <div class="d-flex justify-content-center mb-3">
+            <select class="form-select w-50 me-2" id="filtroCategoria">
+                <option value="">Todas las Categorías</option>
+                <option value="cpu">CPU</option>
+                <option value="gpu">Tarjeta Gráfica</option>
+                <option value="ram">Memoria RAM</option>
+                <option value="storage">Almacenamiento</option>
+                <option value="power">Fuente de Poder</option>
+            </select>
+            <button id="btnBuscar" class="btn btn-primary">Buscar</button>
+        </div>
+
+        <!-- Lista de productos -->
+        <div class="row" id="listaProductos">
+            <!-- CPUs -->
+            <div class="col-md-4 mb-4" data-category="cpu">
+                <div class="card">
+                    <img src="https://i0.wp.com/cemco.com.ec/wp-content/uploads/2024/07/Procesador-INTEL-CORE-I9-14900.webp?fit=720%2C660&ssl=1" class="card-img-top product-image" alt="CPU 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Intel Core i9</h5>
+                        <p class="card-text">$500</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-category="cpu">
+                <div class="card">
+                    <img src="https://jactechnologystore.com/wp-content/uploads/2024/07/PROCESADOR-AMD-RYZEN-7-5700G-38Gz-8-CORE-RADEON-AM4-4.png" class="card-img-top product-image" alt="CPU 2">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Ryzen 7</h5>
+                        <p class="card-text">$400</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade 3 CPUs adicionales con la misma estructura aquí -->
+
+            <!-- Tarjetas Gráficas -->
+            <div class="col-md-4 mb-4" data-category="gpu">
+                <div class="card">
+                    <img src="https://asset.msi.com/resize/image/global/product/product_16051683789c6e411042e9ef0f558376d40b4aa85f.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" class="card-img-top product-image" alt="Tarjeta Gráfica 1">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX 3080</h5>
+                        <p class="card-text">$700</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-category="gpu">
+                <div class="card">
+                    <img src="https://asset.msi.com/resize/image/global/product/product_16052574065c166207f691cefd6b65597460618b9d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" class="card-img-top product-image" alt="Tarjeta Gráfica 2">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Radeon RX 6800</h5>
+                        <p class="card-text">$650</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade 3 GPUs adicionales con la misma estructura aquí -->
+
+            <!-- Memorias RAM -->
+            <div class="col-md-4 mb-4" data-category="ram">
+                <div class="card">
+                    <img src="https://nomadaware.com.ec/wp-content/uploads/2022/11/1.png" class="card-img-top product-image" alt="RAM 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Corsair Vengeance 16GB</h5>
+                        <p class="card-text">$90</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-category="ram">
+                <div class="card">
+                    <img src="https://compuaccesoriosmax.com/web/image/product.template/6089/image" class="card-img-top product-image" alt="RAM 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kingston HyperX 32GB</h5>
+                        <p class="card-text">$160</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade 3 RAM adicionales con la misma estructura aquí -->
+
+            <!-- Almacenamiento -->
+            <div class="col-md-4 mb-4" data-category="storage">
+                <div class="card">
+                    <img src="https://images.samsung.com/is/image/samsung/es-860-evo-sata-3-2-5-ssd-mz-76e1t0b-eu-frontblack-273732078?$650_519_PNG$" class="card-img-top product-image" alt="Almacenamiento 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung SSD 1TB</h5>
+                        <p class="card-text">$120</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-category="storage">
+                <div class="card">
+                    <img src="https://cdn.cs.1worldsync.com/syndication/feeds/wd/inline-content/16/FAF1EAD8138808513F970260A9986DE5F208AA76_WDPURPLESURVEILLANCEHARDDRIVE2TB_w_400_hero.png" class="card-img-top product-image" alt="Almacenamiento 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Western Digital HDD 2TB</h5>
+                        <p class="card-text">$80</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade 3 Almacenamiento adicionales con la misma estructura aquí -->
+
+            <!-- Fuente de Poder -->
+            <div class="col-md-4 mb-4" data-category="power">
+                <div class="card">
+                    <img src="https://assets.corsair.com/image/upload/f_auto,q_auto/content/CP-9020179-NA-RM750x-PSU-01.png" class="card-img-top product-image" alt="Fuente de Poder 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Corsair 750W</h5>
+                        <p class="card-text">$120</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-category="power">
+                <div class="card">
+                    <img src="https://nanotroniconline.com/wp-content/uploads/2020/07/FUENTE-DE-PODER-EVGA-600W-NANOTRONIC.png" class="card-img-top product-image" alt="Fuente de Poder 2">
+                    <div class="card-body">
+                        <h5 class="card-title">EVGA 600W</h5>
+                        <p class="card-text">$80</p>
+                        <button class="btn btn-primary w-100">Agregar a Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade 3 Fuente de Poder adicionales con la misma estructura aquí -->
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Configuración de PC -->
+<section id="configuracion-pc" class="section py-5 confg">
+    <div class="container">
+        <h2 class="text-center mb-4">Te ayudamos a configurar tu nueva PC</h2>
+        <p class="text-center mb-4">
+            En nuestra tienda encontrarás todo lo necesario para armar tu nueva computadora, ya sea para gaming, uso profesional o doméstico. Lo importante para nosotros es que tu nueva PC sea exactamente lo que necesitas y nuestros asesores estarán para acompañarte guiándote para que elijas los mejores componentes.
+        </p>
+        
+        <div class="row">
+            <!-- Componente 1: Procesador -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/128/1086/1086648.png" alt="Procesador" class="icon">
+                <h5>Procesador</h5>
+                <p>Es el componente más importante de tu nueva PC.</p>
+            </div>
+            
+            <!-- Componente 2: Mainboard -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/128/17636/17636575.png" alt="Mainboard" class="icon">
+                <h5>Mainboard</h5>
+                <p>De ella dependerá la comunicación de todos tus componentes.</p>
+            </div>
+            
+            <!-- Componente 3: Memoria RAM -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/908/908623.png" alt="Memoria RAM" class="icon">
+                <h5>Memoria RAM</h5>
+                <p>Determinará la cantidad de pestañas que podrás tener abiertas.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Componente 4: Tarjeta de video -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/2603/2603576.png" alt="Tarjeta de video" class="icon">
+                <h5>Tarjeta de video</h5>
+                <p>Si más FPS quieres tener, la mejor tarjeta de video que puedas debes poner.</p>
+            </div>
+            
+            <!-- Componente 5: Unidad SSD -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/1709/1709445.png" alt="Unidad SSD" class="icon">
+                <h5>Unidad SSD</h5>
+                <p>Sin uno de estos tu PC será muuuyyy leeentaa...</p>
+            </div>
+            
+            <!-- Componente 6: Fuente de poder -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/2291/2291969.png" alt="Fuente de poder" class="icon">
+                <h5>Fuente de poder</h5>
+                <p>Elije sabiamente, será quien proporcione la energía de toda tu PC.</p>
+            </div>
+        </div>
+        
+        <!-- Lado derecho: Imagen y botón -->
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <img src="https://forohardware.com/i/todos-los-pc.jpeg" alt="Configuración de PC" class="img-fluid mb-3">
+                <p>Configura tu nueva PC desde <strong>$399.99</strong></p>
+                <button class="btn btn-primary">¡QUIERO QUE ME ASESOREN!</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección de Mantenimiento -->
+<section id="mantenimiento" class="section py-5 mant">
+    <div class="container">
+        <h2 class="text-center mb-4">Mantenimiento</h2>
+        <div class="row">
+            <!-- Servicio 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="https://cdn.windowsreport.com/wp-content/uploads/sites/5/2023/01/software-reparacion-pc.png" class="card-img-top product-image" alt="Servicio 1" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Reparación de PC</h5>
+                        <p class="card-text">Reparación completa de computadoras y laptops.</p>
+                        <p class="card-price">Precio: $50</p>
+                        <a href="#" class="btn btn-primary w-100">Solicitar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="https://pe.isotools.us/wp-content/uploads/2017/01/27001.jpg" class="card-img-top product-image" alt="Servicio 2" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Instalación de Software</h5>
+                        <p class="card-text">Instalación de programas y sistemas operativos.</p>
+                        <p class="card-price">Precio: $30</p>
+                        <a href="#" class="btn btn-primary w-100">Solicitar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="https://media.minutouno.com/p/862bde8dafddcbe026b84b804c3d85cb/adjuntos/150/imagenes/040/800/0040800057/limpieza-mantenimiento-pc.jpg" class="card-img-top product-image" alt="Servicio 3" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Limpieza de PC</h5>
+                        <p class="card-text">Limpieza interna para mejorar el rendimiento.</p>
+                        <p class="card-price">Precio: $20</p>
+                        <a href="#" class="btn btn-primary w-100">Solicitar Servicio</a>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+<!-- Sección de Equipo -->
+<section id="equipo" class="section py-5 equipo">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestro Equipo</h2>
+        <div class="row justify-content-center">
+            <!-- Integrante 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card team-member">
+                    <img src="https://github.com/Didierinx/TecnoUG/blob/main/images/joel.jpeg?raw=true" class="card-img-top" alt="Integrante 1" style="height: 250px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Joel Frias Palacios</h5>
+                        <p class="card-subtitle mb-2">Desarrollador</p>
+                        <p class="card-text">
+                            <strong>Email:</strong> joel.friaspa@ug.edu.ec<br>
+                            <strong>Teléfono:</strong> 0962727003<br>
+                            <strong>Profesión:</strong> Ing. Software<br>
+                            <strong>Lenguajes:</strong> C#, Java, C<br>
+                            <strong>Base de Datos:</strong> SqlServer
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrante 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card team-member">
+                    <img src="https://github.com/Didierinx/TecnoUG/blob/main/images/didi.png?raw=true" class="card-img-top product-image" alt="Integrante 2" style="height: 250px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Didier Arteaga Calderón</h5>
+                        <p class="card-subtitle mb-2">Diseño</p>
+                        <p class="card-text">
+                            <strong>Email:</strong> didier.arteagacal@edu.edu.ec<br>
+                            <strong>Teléfono:</strong> 0980077488<br>
+                            <strong>Profesión:</strong> Ing. Software<br>
+                            <strong>Lenguajes:</strong> JavaScript, SQL, Python<br>
+                            <strong>Base de Datos:</strong> MySQL
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrante 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card team-member">
+                    <img src="images/david1.jpg" class="card-img-top product-image" alt="Integrante 3" style="height: 250px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">David Verdesoto Sanchez</h5>
+                        <p class="card-subtitle mb-2">Gestor de Cuentas</p>
+                        <p class="card-text">
+                            <strong>Email:</strong> david.verdesoto@ug.edu.ec<br>
+                            <strong>Teléfono:</strong> 0960602288<br>
+                            <strong>Profesión:</strong> Ing. Software<br>
+                            <strong>Lenguajes:</strong> Java, C<br>
+                            <strong>Base de Datos:</strong> MongoBD
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrante 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card team-member">
+                    <img src="https://github.com/Didierinx/TecnoUG/blob/main/images/carlos.png?raw=true" class="card-img-top product-image" alt="Integrante 4" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Carlos Ariel Carriel</h5>
+                        <p class="card-subtitle mb-2">Mantenimiento</p>
+                        <p class="card-text">
+                            <strong>Email:</strong> carlos.carrielmo@ug.edu.ec<br>
+                            <strong>Teléfono:</strong> 0987950900<br>
+                            <strong>Profesión:</strong> Ing. Software<br>
+                            <strong>Lenguajes:</strong> C#, Phyton<br>
+                            <strong>Base de Datos:</strong> MicrosoftSql
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integrante 5 centrado en una nueva fila -->
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card team-member">
+                    <img src="https://github.com/Didierinx/TecnoUG/blob/main/images/melany.png?raw=true" class="card-img-top product-image" alt="Integrante 5" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Melany Salas Alvarez</h5>
+                        <p class="card-subtitle mb-2">Asesora de Ventas</p>
+                        <p class="card-text">
+                            <strong>Email:</strong> melany.salasalv@ug.edu.ec<br>
+                            <strong>Teléfono:</strong> 0981310886<br>
+                            <strong>Profesión:</strong> Ing. Software<br>
+                            <strong>Lenguajes:</strong> C, C#<br>
+                            <strong>Base de Datos:</strong> SqlServer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Contáctenos -->
+<section id="contacto" class="section cont py-5">
+    <div class="container cont">
+        <h2 class="text-center mb-4">Contáctenos</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escriba su mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+        <div class="text-center mt-4">
+            <a href="#" class="me-2"><i class="bi bi-facebook"></i> Facebook</a>
+            <a href="#" class="me-2"><i class="bi bi-twitter"></i> Twitter</a>
+            <a href="#" class="me-2"><i class="bi bi-instagram"></i> Instagram</a>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script>
+    document.getElementById("btnBuscar").addEventListener("click", function() {
+        const selectedCategory = document.getElementById("filtroCategoria").value;
+        const products = document.querySelectorAll("#listaProductos .col-md-4");
+
+        products.forEach(product => {
+            if (selectedCategory === "" || product.getAttribute("data-category") === selectedCategory) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    });
+    
+</script>

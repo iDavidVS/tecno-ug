@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Define un tamaño consistente para las imágenes de los productos */
+.product-image {
+    width: 100%;
+    height: 200px; /* Ajusta esta altura según lo necesario */
+    object-fit: contain;
+}
+
+/* PAGINA PRINCIPAL */
+.main-screen {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.vecteezy.com/system/resources/previews/022/252/108/non_2x/portrait-of-a-male-gamer-playing-online-games-on-a-computer-cyber-sport-concept-generative-ai-free-photo.jpg");
+    background-size: cover; /* La imagen cubre todo el área */
+    background-repeat: no-repeat; /* La imagen no se repite */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza */
+    color: rgb(46, 163, 184);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+        font-size: 3rem;
+        text-align: center;
+        color: #00ffcc; /* Color futurista */
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra de neón */
+        animation: text-appear 2s ease-out;
+}
+
+/* Botones */
+.btn-main {
+    position: relative;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #00ff99;  /* Borde de color verde brillante */
+    color: #00ff99;  /* Texto verde brillante */
+    background-color: transparent;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de animación al pasar el ratón */
+.btn-main:hover {
+    color: #000;  /* Cambio de color de texto */
+    background-color: #00ff99;  /* Fondo verde brillante */
+    border-color: #00ff99;  /* Borde verde */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+/* Agregar un efecto de fondo de animación */
+.btn-main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 255, 153, 0.2); /* Fondo semi-transparente verde */
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+/* Efecto en hover: expansión del fondo de animación */
+.btn-main:hover::before {
+    transform: translate(-50%, -50%) scale(1.5); /* Expansión del círculo */
+    opacity: 0;
+}
+
+.main-screen h1 {
+    font-size: 3rem;
+}
+
+.main-screen p {
+    font-size: 1.2rem;
+}
+
+.btn-main {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+/* MANU NAV */
+
+.navbar {
+    background: linear-gradient(135deg, #102357, #0c3b3b); /* Gradiente verde-teal */
+    border-bottom: 2px solid #00b3b3;  /* Línea inferior delgada para un toque futurista */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Marca (nombre de la empresa) */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #00ff99;  /* Cambio de color en hover */
+}
+
+/* Estilo de los enlaces en la barra de navegación */
+.nav-link {
+    color: #ffffff !important;  /* Color blanco para los enlaces */
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover en los enlaces */
+.nav-link:hover {
+    background-color: rgba(0, 255, 153, 0.2);  /* Fondo verde suave */
+    color: #00ff99;  /* Texto verde brillante */
+    transform: scale(1.05);  /* Efecto de aumento de tamaño */
+}
+
+/* Estilos para el botón de la barra de navegación en móviles */
+.navbar-toggler {
+    border: 1px solid #00ff99; /* Borde verde brillante */
+}
+
+.navbar-toggler-icon {
+    background-color: #00ff99;  /* Icono de toggler en verde */
+}
+
+/* Estilo de la barra de navegación en pantallas pequeñas */
+@media (max-width: 991px) {
+    .navbar {
+        background: #111;  /* Fondo oscuro para pantallas pequeñas */
+    }
+
+    .navbar-nav {
+        background: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú colapsado */
+        border-radius: 10px;
+    }
+
+    .nav-link {
+        border-bottom: 1px solid #00ff99;  /* Borde inferior para separar los enlaces */
+    }
+}
+
+
+/* SECCION QUIENES SOMOS */
+#quienes-somos {
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* Gradiente oscuro */
+    color: #ffffff;  /* Texto blanco */
+    padding: 60px 20px;
+    border-top: 2px solid #00ff99;  /* Borde superior verde */
+    border-bottom: 2px solid #00b3b3;  /* Borde inferior teal */
+    box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.2);  /* Sombra suave */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de líneas decorativas de fondo */
+#quienes-somos::before, #quienes-somos::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgba(0, 255, 153, 0.05);
+    top: 0;
+    animation: slide-lines 6s linear infinite;
+}
+
+/* Línea decorativa izquierda */
+#quienes-somos::before {
+    left: -50px;
+    transform: skewX(45deg);
+}
+
+/* Línea decorativa derecha */
+#quienes-somos::after {
+    right: -50px;
+    transform: skewX(-45deg);
+}
+
+/* Animación de deslizamiento */
+@keyframes slide-lines {
+    0% {
+        transform: translateY(-100%) skewX(45deg);
+    }
+    100% {
+        transform: translateY(100%) skewX(45deg);
+    }
+}
+
+/* Títulos de la sección */
+#quienes-somos h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff99;  /* Color verde brillante */
+    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Texto centrado */
+#quienes-somos p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECCION VENTAS */
+/* Fondo de la sección con gradiente y bordes */
+#ventas {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    padding: 60px 20px;
+    border-top: 2px solid #00ff99;
+    border-bottom: 2px solid #00b3b3;
+    box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título de la sección con estilo tecnológico */
+#ventas h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff99;
+    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto */
+#ventas p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* Estilos para el filtro de categoría */
+#filtroCategoria {
+    background-color: #2a2a2a;
+    color: #00ff99;
+    border: 1px solid #00ff99;
+}
+#btnBuscar {
+    background-color: #00ff99;
+    border: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+#btnBuscar:hover {
+    background-color: #00e68a;
+}
+
+/* Estilo de las tarjetas de productos */
+#listaProductos .card {
+    background: #2a2a2a;
+    border: 1px solid #00ff99;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 153, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#listaProductos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 255, 153, 0.3);
+}
+
+/* Imagen de los productos */
+.product-image {
+    height: 200px;
+    object-fit: contain;
+    background-color: #1a1a1a;
+}
+
+/* Título y precio del producto */
+.card-title {
+    color: #00ff99;
+    font-weight: bold;
+}
+.card-text {
+    color: #ffffff;
+}
+
+/* Botón "Agregar a Carrito" en estilo tecnológico */
+#listaProductos .btn-primary {
+    background-color: #00ff99;
+    border: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+#listaProductos .btn-primary:hover {
+    background-color: #00e68a;
+}
+
+
+
+/* SECCION CONFIGURA PC */
+/* Fondo de la sección con estilo tecnológico */
+#configuracion-pc {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    padding: 60px 20px;
+    border-top: 2px solid #00ff99;
+    border-bottom: 2px solid #00b3b3;
+    box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.2);
+}
+
+/* Título de la sección */
+#configuracion-pc h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff99;
+    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Texto descriptivo */
+#configuracion-pc p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* Estilos de los componentes */
+#configuracion-pc .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 0px 5px #00ff99);
+}
+
+#configuracion-pc h5 {
+    color: #00ff99;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Texto descriptivo debajo de cada componente */
+#configuracion-pc .col-md-4 p {
+    color: #b3b3b3;
+}
+
+/* Estilo de la imagen y el botón */
+#configuracion-pc .img-fluid {
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 153, 0.2);
+}
+
+#configuracion-pc .btn-primary {
+    background-color: #00ff99;
+    border: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#configuracion-pc .btn-primary:hover {
+    background-color: #00e68a;
+    transform: scale(1.05);
+}
+
+/* Efecto hover en los componentes */
+#configuracion-pc .col-md-4:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+
+/* SECCION MANTENIMIENTO */
+
+/* Fondo de la sección con estilo tecnológico */
+#mantenimiento {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    padding: 60px 20px;
+    border-top: 2px solid #00ff99;
+    border-bottom: 2px solid #00b3b3;
+    box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.2);
+}
+
+/* Título de la sección */
+#mantenimiento h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff99;
+    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Estilo de las tarjetas de servicio */
+#mantenimiento .card {
+    background-color: #1a1a1a;
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mantenimiento .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.3);
+}
+
+/* Título y descripción del servicio */
+#mantenimiento .card-title {
+    color: #00ff99;
+    font-weight: bold;
+}
+
+#mantenimiento .card-text, #mantenimiento .card-price {
+    color: #b3b3b3;
+}
+
+/* Estilo de las imágenes de servicio */
+#mantenimiento .product-image {
+    border-bottom: 2px solid #00ff99;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 153, 0.2);
+}
+
+/* Botón de solicitud de servicio */
+#mantenimiento .btn-primary {
+    background-color: #00ff99;
+    border: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#mantenimiento .btn-primary:hover {
+    background-color: #00e68a;
+    transform: scale(1.05);
+}
+
+/* CURRICULUMS */
+
+/* Fondo de la sección con estilo tecnológico */
+#equipo {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    padding: 60px 20px;
+    border-top: 2px solid #00ff99;
+    border-bottom: 2px solid #00b3b3;
+    box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.2);
+}
+
+/* Título de la sección */
+#equipo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff99;
+    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Estilo de las tarjetas de los miembros del equipo */
+#equipo .card {
+    background-color: #1a1a1a;
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#equipo .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.3);
+}
+
+/* Estilo de la imagen de cada miembro */
+#equipo .card-img-top {
+    border-bottom: 2px solid #00ff99;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 4px 8px rgba(0, 255, 153, 0.2);
+}
+
+/* Nombre del miembro del equipo */
+#equipo .card-title {
+    color: #00ff99;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Subtítulo y texto de cada miembro */
+#equipo .card-subtitle {
+    color: #3ca582;
+}
+
+#equipo .card-text {
+    color: #b3b3b3;
+}
+
+/* Efecto hover en el ícono y la imagen */
+#equipo .card .product-image {
+    filter: drop-shadow(0px 0px 5px #00ff99);
+}
+
+
+/* CONTACTOS*/
+.cont {
+    background: #1c1c1c; /* Fondo oscuro */
+    color: #ffffff; /* Texto en blanco */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Sombra azul neón */
+}
+
+/* Estilo del encabezado */
+.cont h2 {
+    color: #00ffff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Estilo del formulario */
+.cont .form-control {
+    background-color: #333333; /* Fondo oscuro para el input */
+    border: 1px solid #00ffff; /* Borde azul neón */
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.cont .form-control::placeholder {
+    color: #b3b3b3; /* Color de texto del placeholder */
+}
+
+.cont .form-control:focus {
+    border-color: #00ccff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Efecto de enfoque */
+}
+
+/* Estilo del botón de enviar */
+.cont .btn-primary {
+    background-color: #00ffff;
+    border-color: #00ccff;
+    color: #1c1c1c;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cont .btn-primary:hover {
+    background-color: #00ccff;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5); /* Efecto de hover */
+}
+
+/* Estilo de los enlaces de redes sociales */
+.cont a {
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cont a:hover {
+    color: #00ccff; /* Cambio de color al pasar el mouse */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
